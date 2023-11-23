@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>A Goose Brand</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/11f4b94031.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="p-0 m-0" style="font-family: 'Montserrat', sans-serif;">
+  <header class="flex p-16 justify-between overflow-hidden">
+    <div class="w-1/4 ml-10 header drop-in">
+      <img src="assets/logo type.svg" alt="logo" />
+    </div>
+    <div class="text-2xl header drop-in">
+      <a href="index.html" class="mx-10 perso">Home</a>
+      <a href="gamerule.html" class="mx-10 perso">Game rules</a>
+      <a href="dice.html" class="mx-10 perso">Online dice / timer</a>
+    </div>
+  </header>
+  <div class="animate fadeIn five">
+    <div class="text-center mt-16">
+      <h1 class="text-4xl relative">
+        Online dice and timer
+        <span class="block h-1 w-16 bg-black mt-6 mx-auto"></span>
+      </h1>
+      <br />
+      <p>To make your gaming experience even easier, we've added a virtual dice and timer for you to use during your
+        games.</p>
+    </div>
+    <div class="flex justify-center items-center">
+      <div class="game mr-32">
+        <div class="container">
+          <h1 class="text-4xl text-center">The dice</h1>
+          <br />
+          <div id='dice' class="dice">
+            <div id="dice-side-one" class='side one'>
+              <div class="dot one-1"></div>
+            </div>
+            <div id="dice-side-two" class='side two'>
+              <div class="dot two-1"></div>
+              <div class="dot two-2"></div>
+            </div>
+            <div id="dice-side-three" class='side three'>
+              <div class="dot three-1"></div>
+              <div class="dot three-2"></div>
+              <div class="dot three-3"></div>
+            </div>
+            <div id="dice-side-four" class='side four'>
+              <div class="dot four-1"></div>
+              <div class="dot four-2"></div>
+              <div class="dot four-3"></div>
+              <div class="dot four-4"></div>
+            </div>
+            <div id="dice-side-five" class='side five'>
+              <div class="dot five-1"></div>
+              <div class="dot five-2"></div>
+              <div class="dot five-3"></div>
+              <div class="dot five-4"></div>
+              <div class="dot five-5"></div>
+            </div>
+            <div id="dice-side-six" class='side six'>
+              <div class="dot six-1"></div>
+              <div class="dot six-2"></div>
+              <div class="dot six-3"></div>
+              <div class="dot six-4"></div>
+              <div class="dot six-5"></div>
+              <div class="dot six-6"></div>
+            </div>
+          </div>
+        </div>
+        <div id='roll' class='roll-button'><button class="p-2 dicebutton">Roll dice !</button></div>
+      </div>
+      <div class="timer animatable mt-32 ml-32">
+        <h1 class="text-4xl text-center">The timer</h1>
+        <br />
+        <svg>
+          <circle cx="50%" cy="50%" r="90" />
+          <circle cx="50%" cy="50%" r="90" pathLength="1" />
+          <text x="100" y="100" text-anchor="middle">
+            <tspan id="timeLeft"></tspan>
+          </text>
+          <text x="100" y="120" text-anchor="middle">seconds</text>
+        </svg>
+        <button class="p-2 timerbutton" onclick="startTimer()">Start timer !</button>
+      </div>
+    </div>
+  </div>
+  <footer class="fooooter">
+    <br />
+    <br />
+    <div class="flex justify-around text-6xl">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-facebook"></i>
+    </div>
+    <br />
+    <br />
+    <div class="text-center flex flex-col items-center">
+      <p>Copyright All Right Reserved 2023</p>
+      <br />
+      <img class="w-1/2" src="assets/logo type.svg" alt="brand" />
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,581 @@
+.container {
+    animation: transitionIn 2s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+.button {
+    border: 1px solid black;
+    padding: 1rem 2rem 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+
+.button:hover {
+    background-color: rgb(255, 217, 0);
+    color: white;
+}
+
+.perso:hover {
+    transition-duration: 500ms;
+    color: rgb(255, 217, 0);
+}
+
+.icon-cards {
+    position: relative;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    margin: 0;
+    color: white;
+    perspective: 1000px;
+    transform-origin: center;
+  }
+  
+  .icon-cards__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: translateZ(-30vw) rotateY(0);
+    animation: carousel 15s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+  
+  .icon-cards__content.step-animation {
+    animation: carousel 8s infinite steps(1) forwards;
+  }
+  
+  .icon-cards__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    transform-origin: center;
+  }
+  
+  .icon-cards__item:nth-child(1) {
+    background: #FDD94F;
+    transform: rotateY(0) translateZ(35vw);
+  }
+  
+  .icon-cards__item:nth-child(2) {
+    background: #F87949;
+    transform: rotateY(120deg) translateZ(35vw);
+  }
+  
+  .icon-cards__item:nth-child(3) {
+    background: #FBAB48;
+    transform: rotateY(240deg) translateZ(35vw);
+  }
+  
+  @keyframes carousel {
+    0%, 17.5% { transform: translateZ(-35vw) rotateY(0); }
+    27.5%, 45% { transform: translateZ(-35vw) rotateY(-120deg); }
+    55%, 72.5% { transform: translateZ(-35vw) rotateY(-240deg); }
+    82.5%, 100% { transform: translateZ(-35vw) rotateY(-360deg); }
+  }
+  
+  .hauteur {
+    top: 87%;
+    z-index: 99999;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+   }
+   
+   .drop-in {
+    animation: drop-in 1s ease 200ms backwards;
+   }
+   
+   .drop-in-2 {
+    animation: drop-in 1200ms ease 500ms backwards;
+   }
+   
+   @keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+
+   .animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .one {
+    -webkit-animation-delay: 1000ms;
+    -moz-animation-delay: 1000ms;
+    animation-delay: 1000ms;
+  }
+  
+  .two {
+    -webkit-animation-delay: 1030ms;
+    -moz-animation-delay: 1030ms;
+    animation-delay: 1030ms;
+  }
+  
+  .three {
+    -webkit-animation-delay: 1080ms;
+    -moz-animation-delay: 1080ms;
+    animation-delay: 1080ms;
+  }
+  
+  .four {
+    -webkit-animation-delay: 1100ms;
+    -moz-animation-delay: 1100ms;
+    animation-delay: 1100ms;
+  }
+
+  .five {
+    -webkit-animation-delay: 800ms;
+    -moz-animation-delay: 800ms;
+    animation-delay: 800ms;
+  }
+
+  @-webkit-keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+  
+ 
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+
+  @-webkit-keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  .fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  }
+  
+
+  @-webkit-keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  .fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+  .foooter {
+    border-top: 2px solid white;
+    margin: 0px 40rem 0px;
+  }
+
+  .fooooter {
+    border-top: 2px solid black;
+    margin: 10rem 40rem 3rem;
+  }
+
+  .dicebutton {
+    position: relative;
+    top:70px;
+    left: 40px;
+    color: #fff;
+    background-color: #f4d35e;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px; 
+    box-shadow: 1px 3px #50514F;
+  }
+
+  .timerbutton {
+    position: relative;
+    top: 15px;
+    left: 30px;
+    background-color: #f4d35e;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 20px; 
+    box-shadow: 1px 3px #50514F;
+  }
+
+
+  .game {
+    position: relative;
+    width: auto;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    top: 70px;
+}
+
+.dice {
+  position: relative;
+  width: 200px; /* Modifiez la largeur selon vos besoins */
+  height: 200px; /* Modifiez la hauteur selon vos besoins */
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: -10px 5px 5px -10px;
+    border-radius: 20px;
+    background-color: rgb(255, 208, 0);
+    box-shadow: inset 2px 2px rgb(255, 196, 0);
+}
+
+.side {
+  position: absolute;
+  background-color: #ffF;
+  border-radius: 5px;
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+  height: 200px; /* Ajustez la hauteur selon vos besoins */
+  border: 1px solid black;
+  text-align: center;
+  line-height: 2em;/* Ajustez cette valeur en fonction de la moitié de la taille du dé */
+}
+
+.side:nth-child(1) {
+    transform: translateZ(3.1em);
+}
+
+.side:nth-child(6) {
+    transform: rotateY(90deg) translateZ(3.1em);
+}
+
+.side:nth-child(3) {
+    transform: rotateY(-90deg) translateZ(3.1em);
+}
+
+.side:nth-child(4) {
+    transform: rotateX(90deg) translateZ(3.1em);
+}
+
+.side:nth-child(5) {
+    transform: rotateX(-90deg) translateZ(3.1em);
+}
+
+.side:nth-child(2) {
+    transform: rotateY(-180deg) translateZ(3.1em);
+}
+
+.show-1 {
+    transform: rotateX(720deg) rotateZ(-720deg);
+}
+
+.show-6 {
+    transform: rotateX(-900deg) rotateZ(1080deg);
+}
+
+.show-3 {
+    transform: rotateY(-450deg) rotateZ(-1440deg);
+}
+
+.show-4 {
+    transform: rotateY(810deg) rotateZ(720deg);
+}
+
+.show-5 {
+    transform: rotateX(-810deg) rotateZ(-1080deg);
+}
+
+.show-2 {
+    transform: rotateX(450deg) rotateZ(-720deg);
+}
+
+.two-1,
+.three-1,
+.four-1,
+.five-1,
+.six-1 {
+    top: 20%;
+    left: 20%;
+}
+
+.four-3,
+.five-3,
+.six-4 {
+    top: 20%;
+    left: 80%;
+}
+
+.one-1,
+.three-2,
+.five-5 {
+    top: 50%;
+    left: 50%;
+}
+
+.four-2,
+.five-2,
+.six-3 {
+    top: 80%;
+    left: 20%;
+}
+
+.two-2,
+.three-3,
+.four-4,
+.five-4,
+.six-6 {
+    top: 80%;
+    left: 80%;
+}
+
+.six-2 {
+    top: 50%;
+    left: 20%;
+}
+
+.six-5 {
+    top: 50%;
+    left: 80%;
+}
+
+.roll-button {
+    margin-top: 20px;
+}
+
+.timer {
+    margin-top: 10px;
+}
+  
+.timer > svg {
+    width: 200px;
+    height: 200px;
+}
+
+.timer > svg > circle {
+    fill: none;
+    stroke-opacity: 0.3;
+    stroke: #f4d35e;
+    stroke-width: 10;
+    transform-origin: center center;
+    transform: rotate(-90deg);
+}
+
+.timer > svg > circle + circle {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    stroke-linecap: round;
+    stroke-opacity: 1;
+}
+
+.timer.animatable > svg > circle + circle {
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.timer > svg > text {
+    font-size: 2rem;
+}
+
+.timer > svg > text + text {
+    font-size: 1rem;
+}
+
+.container {
+  width: 100%;
+}
+
+.progressbar {
+  counter-reset: step;
+}
+
+.progressbar li {
+  position: relative;
+  list-style: none;
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+/* Circles */
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #f4d35e;
+   
+  /* Center # in circle */
+  line-height: 39px;
+}
+
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #f4d35e ;
+  top: 20px; /*half of height Parent (li) */
+  left: -50%;
+  z-index: -1;
+}
+
+.progressbar li:first-child:after {
+  content: none;
+}
+
+.progressbar li.active:before {
+  background: #f4d35e;
+}
+
+.progressbar li.active + li:after {
+  background: #f4d35e;
+}
